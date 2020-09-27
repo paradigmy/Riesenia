@@ -1,0 +1,53 @@
+[fmph]
+if M == 1 && N == 1:
+    return 1
+if M % 2 == 1 && N % 2 == 1:
+    return ((M * N) / 2) + 1
+else:
+    return (M * N) / 2
+ 
+[kral]
+if M == 1 && N == 1:
+    return 1
+if M % 2 == 1:
+    M++
+if N % 2 == 1:
+    N++
+return (M / 2) * (N / 2)
+ 
+[veza]
+return min(M, N)
+ 
+[kralovna]
+if M <= 2 && N <= 2:
+    return 1
+if M == 3 && N == 3:
+    return 2
+return min(M, N)
+ 
+[strelec]
+if min(M, N) == 1:
+    return 1
+if M == 2 && N == 2:
+    return 2
+if min(M, N) < 3 && max(M, N) <= 3:
+    return 3
+if M == 3 && N == 3:
+    return 4
+return 2 * min(M, N)
+ 
+[kon]
+if min(M, N) == 1:
+    return max(M, N)
+if min(M, N) <= 2 && max(M, N) <= 3:
+    return 4
+if M % 2 == 1 && N % 2 == 1:
+    return ((M * N) / 2) + 1
+else:
+    return (M * N) / 2
+ 
+[dokaz]
+Okrem pripadov s malou sachovnicou, najvacsi pocet koni ziskame 
+ak ich rozmiestnime na vsetky biele alebo na vsetky cierne policka,
+kedze kone vedia vybijat len figurky na opacnej farbe. Tym padom 
+nevieme umiestnit dalsieho kona, lebo by bol na opacnej farbe
